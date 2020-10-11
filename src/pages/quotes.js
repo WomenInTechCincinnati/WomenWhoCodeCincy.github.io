@@ -6,7 +6,6 @@ const QuotesPage = () => (
   <Layout>
     <SEO title="Quotes" />
     <h1>Quotes</h1>
-    
   </Layout>
 )
 

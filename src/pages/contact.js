@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby"
 
 const ContactPage = () => {
   const contactInfo = useStaticQuery(graphql`
@@ -12,7 +12,8 @@ const ContactPage = () => {
           twitter
         }
       }
-    }`)
+    }
+  `)
   return (
     <Layout>
       <SEO title="Contact" />
