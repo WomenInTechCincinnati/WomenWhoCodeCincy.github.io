@@ -2,18 +2,18 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, menuLinks }) => (
   <header
     style={{
       background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      marginBottom: `1.45rem`
     }}
   >
     <div
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `1.45rem 1.0875rem`
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -21,22 +21,47 @@ const Header = ({ siteTitle }) => (
           to="/"
           style={{
             color: `white`,
-            textDecoration: `none`,
+            textDecoration: `none`
           }}
         >
           {siteTitle}
         </Link>
       </h1>
+      <div>
+        <nav>
+          <ul style={{ display: "flex", flex: 1 }}>
+            {menuLinks.map(link => (
+              <li
+                key={link.name}
+                style={{
+                  listStyleType: `none`,
+                  padding: `1rem`
+                }}
+              >
+                <Link style={{ color: `white` }} to={link.link}>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 )
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  menuLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      link: PropTypes.string
+    })
+  )
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: ``
 }
 
 export default Header
