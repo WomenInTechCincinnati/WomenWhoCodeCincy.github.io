@@ -1,8 +1,21 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Women Who Code Cincinnati`,
+    description: `Women Who Code is a non-profit organization dedicated to inspiring women to excel in technology careers.`,
+    author: `@CincyWWCode`,
+    menuLinks:  [{
+      name: `Members`,
+      link: `/members`
+    },{
+      name: `Quotes`,
+      link: `/quotes`
+    },{
+      name: `Resources`,
+      link: `/resources`
+    },{
+      name: `Contact`,
+      link: `/contact`
+    },]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
