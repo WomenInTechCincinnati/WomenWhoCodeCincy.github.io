@@ -15,8 +15,8 @@ Welcome to the Cincinnati Women Who Code repository, a Gatsby project that showc
 ## 🚀 Quick start guide to contributing
 
 1. **Locate an issue that needs work**
-  Navigate to https://github.com/WomenWhoCodeCincy/WomenWhoCodeCincy.github.io/issues and review the list of open issues.
-  When ready to work an issue, place a commment on the issue so others know it is being worked by you.  And PLEASE only comment if you plan to work the issue immediately. 
+    Navigate to https://github.com/WomenWhoCodeCincy/WomenWhoCodeCincy.github.io/issues and review the list of open issues.
+    When ready to work an issue, place a comment on the issue so others know it is being worked by you.  And PLEASE only comment if you plan to work the issue immediately. 
 
 2.  **Fork the repository**
    In the upper right-hand corner, click on <img alt="WWC" src="src/images/fork.png" width="50" /> to fork this repo to your github account.
@@ -34,7 +34,7 @@ Welcome to the Cincinnati Women Who Code repository, a Gatsby project that showc
     ```
 4.  **Create a branch**
 
-    Create a new branch off of the main branch. 
+    Create a new branch off of the main branch. Please name the branch in a manner that is indicative of the issue being resolved.
     ```shell
     git checkout -b myNewBranchName
     ```
