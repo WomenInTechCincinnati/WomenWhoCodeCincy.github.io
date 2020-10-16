@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Women Who Code Cincinnati`,
+    title: `Women Who Code`,
+    subTitle: `Cincinnati`,
     description: `Women Who Code is a non-profit organization dedicated to inspiring women to excel in technology careers.`,
     author: `@CincyWWCode`,
     menuLinks:  [{
