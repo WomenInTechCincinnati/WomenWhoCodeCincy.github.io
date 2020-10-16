@@ -1,45 +1,54 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="https://womenwhocodecincy.github.io/">
+    <img alt="WWC" src="src/images/WWC_teal.jpg" width="100" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  Women Who Code Cincinnati
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Welcome to the Cincinnati Women Who Code repository, a Gatsby project that showcases members and shares resources. Collaboration is welcome and encouraged!
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
 
-## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+## 🚀 Quick start guide to contributing
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+1. **Locate an issue that needs work**
+  Navigate to https://github.com/WomenWhoCodeCincy/WomenWhoCodeCincy.github.io/issues and review the list of open issues.
+  When ready to work an issue, place a commment on the issue so others know it is being worked by you.  And PLEASE only comment if you plan to work the issue immediately. 
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+2.  **Fork the repository**
+   In the upper right-hand corner, click on <img alt="WWC" src="src/images/fork.png" width="50" /> to fork this repo to your github account.
+3. **Clone the repository**
+  Navigate to your github account and locate the newly forked WomenWhoCodeCincy.github.io repo.
+  Click the <img alt="WWC" src="src/images/code.png" width="50" /> button and copy the url.
+  Using the command line or your favorite method of interacting with git, clone the repo
+   ```shell
+    git clone -b pasteInTheRepoNameHere
     ```
-
-1.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
+  
+    Change directory into the root of the repo 
     ```shell
-    cd my-default-starter/
-    gatsby develop
+    cd WomenWhoCodeCincy.github.io
+    ```
+4.  **Create a branch**
+
+    Create a new branch off of the main branch. 
+    ```shell
+    git checkout -b myNewBranchName
     ```
 
 1.  **Open the source code and start editing!**
+   
+    Open the `WomenWhoCodeCincy.github.io` directory in your code editor of choice and start working!!!
 
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-
+## 💫 How to run the project locally
+Open a terminal and navigate to your working branch. Execute the command
+  ```shell
+  npm start
+  ```
+The site will then be running locally on http://localhost:8000/
 ## 🧐 What's inside?
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
@@ -82,7 +91,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
-## 🎓 Learning Gatsby
+## 🎓 Resources for Learning Gatsby
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
 
@@ -90,10 +99,3 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
