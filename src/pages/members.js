@@ -4,8 +4,8 @@ import SEO from "../components/seo"
 
 const MembersPage = () => (
   <Layout>
-    <SEO title="Members" />
-    <h1>Members</h1>
+    <SEO title=" Chapter Members" />
+    <h1>Chapter Members</h1>
   </Layout>
 )
 
