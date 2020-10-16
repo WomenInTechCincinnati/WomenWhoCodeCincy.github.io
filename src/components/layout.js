@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          subTitle
           menuLinks {
             name
             link
@@ -30,7 +31,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header
-        siteTitle={data.site.siteMetadata?.title || `Title`}
+        siteTitle={data.site.siteMetadata.title}
+        subTitle={data.site.siteMetadata.subTitle}
         menuLinks={data.site.siteMetadata.menuLinks}
       />
       <div

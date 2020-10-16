@@ -256,10 +256,10 @@ li > p {
 }
 
 .primaryColorTeal {
-  color: #007a7c;
+  background-color: #007a7c;
 }
  .primaryColorLight {
-  color: #99E1DD;
+  background-color: #99E1DD;
  }
  .secondaryColorGrey, .primaryTextColor {
    color: #48484A;
