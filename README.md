@@ -48,13 +48,14 @@ Welcome to the Cincinnati Women Who Code repository, a Gatsby project that showc
     Open the `WomenWhoCodeCincy.github.io` directory in your code editor of choice and start working!!!
 
 6. **Create a pull request**
-  Once your changes have been completed and tested, push your branch to your repo. In github, navigate to the fork you created of the WomenWhoCodeCincy.github.io repo. Click on Pull Requests in the main menu and select New Pull Request. 
-  Under the Compare Changes title, click on compare across forks. This will pre-populate the repos and branches to be merged. Verify that the head repo is your forked repo and the branch is your branch. Verify that the base repo is the WomenWhoCodeCincy.github.io repo and the branch is main.
- <img alt="WWC" src="src/images/prRepos.png" width="450" /> 
- Click create pull request. The Open Pull Request page will appear which includes the pull request template for the base repo. Please complete the template and click Create Pull Request.
- On the right hand side of the screen, click on reviewers and select Alexx Mitchell
-   <img alt="WWC" src="src/images/prReviewers.png" width="150" /> 
-   You are now done and your pull request will be code reviewed. You will be notified regarding any feedback or it has been approved.
+
+    Once your changes have been completed and tested, push your branch to your repo. In github, navigate to the fork you created of the WomenWhoCodeCincy.github.io repo. Click on Pull Requests in the main menu and select New Pull Request. 
+    Under the Compare Changes title, click on compare across forks. This will pre-populate the repos and branches to be merged. Verify that the head repo is your forked repo and the branch is your branch. Verify that the base repo is the WomenWhoCodeCincy.github.io repo and the branch is main.
+  <img alt="WWC" src="src/images/prRepos.png" width="850" /> 
+  Click create pull request. The Open Pull Request page will appear which includes the pull request template for the base repo. Please complete the template and click Create Pull Request.
+  On the right hand side of the screen, click on reviewers and select Alexx Mitchell
+  <img alt="WWC" src="src/images/prReviewers.png" width="250" />
+  You are now done and your pull request will be code reviewed. You will be notified regarding any feedback or it has been approved.
   
 
 ## 💫 How to run the project locally
