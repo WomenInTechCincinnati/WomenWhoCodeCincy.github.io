@@ -55,7 +55,7 @@ Welcome to the Cincinnati Women Who Code repository, a Gatsby project that showc
   Click create pull request. The Open Pull Request page will appear which includes the pull request template for the base repo. Please complete the template and click Create Pull Request.
   On the right hand side of the screen, click on reviewers and select Alexx Mitchell
   <img alt="WWC" src="src/images/prReviewers.png" width="250" />
-  You are now done and your pull request will be code reviewed. You will be notified regarding any feedback or it has been approved.
+  You are now done and your pull request will be code reviewed. You will be notified regarding any feedback and when it has been approved.
   
 
 ## 💫 How to run the project locally
