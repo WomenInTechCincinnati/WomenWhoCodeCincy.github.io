@@ -2,32 +2,29 @@ import React, { Component } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ResourceItem from "../components/resourceItem"
+import {fetchResults} from '../utils/api.js';
 
 class ResourcesPage extends Component {
   state = {
     resourcesList: [],
-    hasError: false
+    hasError: false,
+    errorMessage: ''
   }
-  componentDidMount() {
-    fetch(
-      "http://my-json-server.typicode.com/WomenWhoCodeCincy/wwcode-cincy-database/learning_resources"
-    )
-      .then(response => {
-        if (response.ok) {
-          this.setState({ hasError: false })
-          return response.json()
-        } else {
-          this.setState({ hasError: true })
-        }
-      })
-      .then(data => {
-        this.setState({ resourcesList: data })
-      })
-      .catch(() => this.setState({ hasError: true }))
+  async componentDidMount() {
+    try {
+      const response = await fetchResults('http://my-json-server.typicode.com/WomenWhoCodeCincy/wwcode-cincy-database/learning_reso_urces');
+      if (response.success){
+        this.setState({ resourcesList: response.results, hasError: false});
+      } else {
+        this.setState({hasError: true, errorMessage: response.error});
+      }
+    } catch {
+      this.setState({hasError: true});
+    }
   }
 
   render() {
-    const { resourcesList, hasError } = this.state
+    const { resourcesList, hasError, errorMessage } = this.state
     return (
       <Layout>
         <SEO title="Resources" />
@@ -37,7 +34,8 @@ class ResourcesPage extends Component {
           Check out this list of resources links that were submitted by WWC
           Cincinnati members.
         </p>
-        {hasError && <p>Unable to fetch resources</p>}
+        {hasError && !errorMessage && <p>Unable to fetch resources</p>}
+        {hasError && errorMessage && <p>{errorMessage}</p>}
         <ul>
           {resourcesList.map((resource, index) => (
             <ResourceItem
