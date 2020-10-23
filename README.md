@@ -1,4 +1,3 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://womenwhocodecincy.github.io/">
     <img alt="WWC" src="src/images/WWC_teal.jpg" width="100" />
@@ -36,6 +35,35 @@ Welcome to the Cincinnati Women Who Code repository, a Gatsby project that showc
       ```shell
       cd WomenWhoCodeCincy.github.io
       ```
+  
+4. **Set upstream tracking**
+
+    In order to pull the changes from the original repository into your forked version, which will keep the repos in sync, you need to add the original git repo as an upstream repository.
+  Find the remote repos that are configured:
+      ```shell
+      git remote -v  
+      ```
+    That will return something similar to this:
+      ```shell
+      origin	https://github.com/yourusername/WomenWhoCodeCincy.github.io.git (fetch)
+      origin	https://github.com/yourusername/WomenWhoCodeCincy.github.io.git (push)
+      ```
+    Set upstream tracking:
+      ```shell
+      git remote add upstream https://github.com/WomenWhoCodeCincy/WomenWhoCodeCincy.github.io.git
+      ```
+    Now check the remote repos again:
+      ```shell
+      git remote -v  
+      ```
+      Which will return something similar to this:
+      ```shell
+      origin	https://github.com/yourusername/WomenWhoCodeCincy.github.io.git (fetch)
+      origin	https://github.com/yourusername/WomenWhoCodeCincy.github.io.git (push)
+      upstream	https://github.com/WomenWhoCodeCincy/WomenWhoCodeCincy.github.io.git (fetch)
+      upstream	https://github.com/WomenWhoCodeCincy/WomenWhoCodeCincy.github.io.git (push) 
+      ```
+      You are all set to go!
 4.  **Create a branch**
 
     Create a new branch off of the main branch. Please name the branch in a manner that is indicative of the issue being resolved.
@@ -57,6 +85,21 @@ Welcome to the Cincinnati Women Who Code repository, a Gatsby project that showc
   <img alt="WWC" src="src/images/prReviewers.png" width="250" />
   You are now done and your pull request will be code reviewed. You will be notified regarding any feedback and when it has been approved.
   
+## 🎶	 Keep your fork in sync 
+  
+  It is very important to keep your fork in sync with the original repo.  It is recommended that you sync prior to starting a new branch and also prior to creating pull request.
+  Navigate to your main branch and execute this:
+ ```shell
+ git fetch upstream
+ ```
+Merge the changes from the upstream/main into your local main branch
+```shell
+git merge upstream/main
+```
+Push those changes to your fork 
+```shell
+git push origin main
+```
 
 ## 💫 How to run the project locally
 Open a terminal and navigate to your working branch. Execute the command
