@@ -12,7 +12,7 @@ class ResourcesPage extends Component {
   }
   async componentDidMount() {
     try {
-      const response = await fetchResults('http://my-json-server.typicode.com/WomenWhoCodeCincy/wwcode-cincy-database/learning_reso_urces');
+      const response = await fetchResults('http://my-json-server.typicode.com/WomenWhoCodeCincy/wwcode-cincy-database/learning_resources');
       if (response.success){
         this.setState({ resourcesList: response.results, hasError: false});
       } else {
@@ -36,7 +36,7 @@ class ResourcesPage extends Component {
         </p>
         {hasError && !errorMessage && <p>Unable to fetch resources</p>}
         {hasError && errorMessage && <p>{errorMessage}</p>}
-        <ul>
+        <div className="resourcesList">
           {resourcesList.map((resource, index) => (
             <ResourceItem
               key={index}
@@ -46,7 +46,7 @@ class ResourcesPage extends Component {
               topics={resource.topics}
             />
           ))}
-        </ul>
+        </div>
       </Layout>
     )
   }
