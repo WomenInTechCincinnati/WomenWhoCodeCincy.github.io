@@ -32,9 +32,10 @@ class MembersPage extends Component {
     const { fetchedMembersList, hasError } = this.state
 
     const membersList = fetchedMembersList.map((member, index) => <div key={member.name + index}>
+
       {member.image_url && <img onError={this.addDefaultSrc} src={member.image_url} alt={member.name + `'s beautiful face`} style={{ maxWidth: 200 }} />}
       <h2>{member.name}</h2>
-      {member.location && <div><h3>Location</h3><p>{member.location}</p></div>}
+      {member.location && <div><p>{member.location}</p></div>}
       {member.favorite_techs && <div><h3>Favorite Technologies</h3><ul>{member.favorite_techs.map((tech, index) => <li key={index}>{tech}</li>)}</ul></div>}
       {member.hobbies && <div><h3>Hobbies</h3><ul>{member.hobbies.map((hobby, index) => <li key={index}>{hobby}</li>)}</ul></div>}
       {member.links && <div><h3>Contact Info</h3>
@@ -47,6 +48,7 @@ class MembersPage extends Component {
           {member.links.meetup && <li>Meetup: {member.links.meetup}</li>}
         </ul>
       </div>}
+      <hr />
     </div>)
 
 
