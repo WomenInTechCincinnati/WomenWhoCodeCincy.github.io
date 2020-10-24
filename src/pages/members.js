@@ -40,12 +40,12 @@ class MembersPage extends Component {
       {member.hobbies && <div><h3>Hobbies</h3><ul>{member.hobbies.map((hobby, index) => <li key={index}>{hobby}</li>)}</ul></div>}
       {member.links && <div><h3>Contact Info</h3>
         <ul>
-          {member.links.twitter && <li>Twitter: {member.links.twitter}</li>}
-          {member.links.facebook && <li>Facebook: {member.links.linkedIn}</li>}
-          {member.links.linkedIn && <li>LinkedIn: {member.links.linkedIn}</li>}
-          {member.links.website && <li>Website: {member.links.website}</li>}
-          {member.links.github && <li>Github: {member.links.github}</li>}
-          {member.links.meetup && <li>Meetup: {member.links.meetup}</li>}
+          {member.links.twitter && <li><a href={member.links.twitter} >Twitter</a> </li>}
+          {member.links.facebook && <li><a href={member.links.facebook} >Facebook</a> </li>}
+          {member.links.linkedIn && <li><a href={member.links.linkedIn} >LinkedIn</a> </li>}
+          {member.links.website && <li><a href={member.links.website} >Website</a> </li>}
+          {member.links.github && <li><a href={member.links.github} >Github</a> </li>}
+          {member.links.meetup && <li><a href={member.links.meetup} >Meetup</a> </li>}
         </ul>
       </div>}
       <hr />
