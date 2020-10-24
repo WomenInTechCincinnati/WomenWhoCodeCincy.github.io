@@ -1,14 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 const ResourceItem = ({ title, description, url, topics }) => (
-  <li>
-    <p>{title}</p>
+  <div>
+    <a target="_blank" rel="noopener noreferrer" href={url}>{title}</a>
     <p>{description}</p>
     <p>{topics.join(", ")}</p>
-    <a target="_blank" rel="noopener noreferrer" href={url}>
-      {url}
-    </a>
-  </li>
+  </div>
 )
 
 ResourceItem.propTypes = {
