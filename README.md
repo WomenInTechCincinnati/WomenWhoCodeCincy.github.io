@@ -63,7 +63,12 @@ Welcome to the Cincinnati Women Who Code repository, a Gatsby project that showc
       upstream	https://github.com/WomenWhoCodeCincy/WomenWhoCodeCincy.github.io.git (fetch)
       upstream	https://github.com/WomenWhoCodeCincy/WomenWhoCodeCincy.github.io.git (push) 
       ```
-      You are all set to go!
+     
+5.  **Install Dependencies**
+      ```shell
+     npm install  
+      ```
+       You are all set to go!
 4.  **Create a branch**
 
     Create a new branch off of the main branch. Please name the branch in a manner that is indicative of the issue being resolved.
