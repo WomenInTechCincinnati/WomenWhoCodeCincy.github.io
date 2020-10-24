@@ -28,7 +28,7 @@ Welcome to the Cincinnati Women Who Code repository, a Gatsby project that showc
     Click the <img alt="WWC" src="src/images/code.png" width="50" /> button and copy the url.
     Using the command line or your favorite method of interacting with git, clone the repo
     ```shell
-      git clone -b pasteInTheRepoNameHere
+      git clone pasteInTheRepoNameHere
       ```
     
       Change directory into the root of the repo 
