@@ -55,7 +55,7 @@ class MembersPage extends Component {
     return (<Layout>
       <SEO title="Chapter Members" />
       <h1>Chapter Members</h1>
-      {hasError && <p>Unable to fetch quotes</p>}
+      {hasError && <p>Unable to fetch members.</p>}
       <section className="members">
         {membersList}
       </section>
