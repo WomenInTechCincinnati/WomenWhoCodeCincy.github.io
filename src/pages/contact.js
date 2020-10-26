@@ -20,6 +20,7 @@ const ContactPage = () => {
       <h1>Contact Info</h1>
       <p>{contactInfo.contact.email}</p>
       <a href={contactInfo.contact.links.twitter}>twitter</a>
+      <a href={contactInfo.contact.links.facebook}>facebook</a>
     </Layout>
   )
 }
