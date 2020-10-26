@@ -10,6 +10,7 @@ const ContactPage = () => {
         email
         links {
           twitter
+          facebook
         }
       }
     }
