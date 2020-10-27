@@ -10,12 +10,12 @@ const useStyles = makeStyles(theme => ({
     marginBottom: "1.45rem"
   },
   headerInnerDiv: {
-    margin: `0 auto`,
+    margin: "0 auto",
     maxWidth: 960,
-    padding: `1.45rem 1.0875rem`,
-    display: `flex`,
-    justifyContent: `space-between`,
-    alignItems: `center`
+    padding: "1.45rem 1.0875rem",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center"
   },
   link: {
     color: "white",
@@ -29,10 +29,10 @@ const useStyles = makeStyles(theme => ({
     }
   },
   subTitle: {
-    fontWeight: `bolder`,
-    letterSpacing: `0.28rem`,
-    display: `block`,
-    textTransform: `uppercase`,
+    fontWeight: "bolder",
+    letterSpacing: "0.28rem",
+    display: "block",
+    textTransform: "uppercase",
     [theme.breakpoints.up("md")]: {
       letterSpacing: `0.5rem`
     }
