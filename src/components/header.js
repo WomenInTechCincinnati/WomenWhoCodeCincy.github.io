@@ -7,62 +7,73 @@ import PropTypes from "prop-types"
 const useStyles = makeStyles(theme => ({
   header: {
     backgroundColor: "#007a7c",
-    marginBottom: "1.45rem",
+    marginBottom: "1.45rem"
   },
   headerInnerDiv: {
-    margin: `0 auto`,
+    margin: "0 auto",
     maxWidth: 960,
-    padding: `1.45rem 1.0875rem`,
-    display: `flex`,
-    justifyContent: `space-between`,
+    padding: "1.45rem 1.0875rem",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center"
   },
   link: {
     color: "white",
-    textDecoration: "none",
+    textDecoration: "none"
   },
   siteTitle: {
-    minWidth: "350px",
+    maxWidth: "350px",
+    fontSize: "1.25rem",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "2.25rem"
+    }
   },
   subTitle: {
-    fontWeight: `bolder`,
-    letterSpacing: "0.5rem",
-    display: `block`,
-    textTransform: `uppercase`,
+    fontWeight: "bolder",
+    letterSpacing: "0.28rem",
+    display: "block",
+    textTransform: "uppercase",
+    [theme.breakpoints.up("md")]: {
+      letterSpacing: `0.5rem`
+    }
   },
   isDesktopLayout: {
     [theme.breakpoints.down("sm")]: {
-      display: "none",
+      display: "none"
     },
     [theme.breakpoints.up("md")]: {
-      display: "block",
-    },
+      display: "block"
+    }
   },
   isMobileLayout: {
     [theme.breakpoints.down("sm")]: {
-      display: "block",
+      display: "block"
     },
     [theme.breakpoints.up("md")]: {
-      display: "none",
-    },
+      display: "none"
+    }
   },
   linkOuterWrapper: {
-    alignSelf: "flex-end",
+    [theme.breakpoints.up("md")]: {
+      alignSelf: "flex-end"
+    }
   },
   linkInnerWrapper: {
     display: "flex",
-    flex: 1,
+    flex: 1
   },
   listItem: {
     listStyleType: "none",
-    padding: "1rem",
+    padding: "1rem"
   },
   hamburgerMenu: {
     fontSize: "18px",
-    color: "white",
+    color: "white"
   },
-  button: {
-    paddingBottom: "1rem",
-  },
+  mobileLink: {
+    textDecoration: "none",
+    color: "hsla(0, 0%, 0%, 0.8)"
+  }
 }))
 
 export default function Header({ siteTitle, subTitle, menuLinks }) {
@@ -80,13 +91,13 @@ export default function Header({ siteTitle, subTitle, menuLinks }) {
     menuLinks: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string,
-        link: PropTypes.string,
+        link: PropTypes.string
       })
-    ),
+    )
   }
 
   Header.defaultProps = {
-    siteTitle: ``,
+    siteTitle: ``
   }
 
   return (
@@ -94,7 +105,6 @@ export default function Header({ siteTitle, subTitle, menuLinks }) {
       <div className={classes.headerInnerDiv}>
         <Link to="/" className={classes.link}>
           <h1 className={classes.siteTitle}>
-            {" "}
             {siteTitle}
             <span className={classes.subTitle}>{subTitle}</span>
           </h1>
@@ -106,7 +116,6 @@ export default function Header({ siteTitle, subTitle, menuLinks }) {
                 aria-controls="simple-menu"
                 aria-haspopup="true"
                 onClick={handleClick}
-                className={classes.button}
               >
                 <GiHamburgerMenu className={classes.hamburgerMenu} />
               </Button>
@@ -118,13 +127,18 @@ export default function Header({ siteTitle, subTitle, menuLinks }) {
                 onClose={handleClose}
               >
                 {menuLinks.map(link => (
-                  <MenuItem
-                    onClick={handleClose}
+                  <Link
                     key={link.name}
-                    className={classes.listItem}
+                    to={link.link}
+                    className={classes.mobileLink}
                   >
-                    {link.name}
-                  </MenuItem>
+                    <MenuItem
+                      onClick={handleClose}
+                      className={classes.listItem}
+                    >
+                      {link.name}
+                    </MenuItem>
+                  </Link>
                 ))}
               </Menu>
             </div>
@@ -133,8 +147,7 @@ export default function Header({ siteTitle, subTitle, menuLinks }) {
                 {menuLinks.map(link => (
                   <li key={link.name} className={classes.listItem}>
                     <Link className={classes.link} to={link.link}>
-                      {" "}
-                      {link.name}{" "}
+                      {link.name}
                     </Link>
                   </li>
                 ))}
