@@ -14,20 +14,28 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 960,
     padding: `1.45rem 1.0875rem`,
     display: `flex`,
-    justifyContent: `space-between`
+    justifyContent: `space-between`,
+    alignItems: `center`
   },
   link: {
     color: "white",
     textDecoration: "none"
   },
   siteTitle: {
-    minWidth: "350px"
+    maxWidth: "350px",
+    fontSize: "1.25rem",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "2.25rem"
+    }
   },
   subTitle: {
     fontWeight: `bolder`,
-    letterSpacing: "0.5rem",
+    letterSpacing: `0.28rem`,
     display: `block`,
-    textTransform: `uppercase`
+    textTransform: `uppercase`,
+    [theme.breakpoints.up("md")]: {
+      letterSpacing: `0.5rem`
+    }
   },
   isDesktopLayout: {
     [theme.breakpoints.down("sm")]: {
@@ -46,7 +54,9 @@ const useStyles = makeStyles(theme => ({
     }
   },
   linkOuterWrapper: {
-    alignSelf: "flex-end"
+    [theme.breakpoints.up("md")]: {
+      alignSelf: "flex-end"
+    }
   },
   linkInnerWrapper: {
     display: "flex",
@@ -59,9 +69,6 @@ const useStyles = makeStyles(theme => ({
   hamburgerMenu: {
     fontSize: "18px",
     color: "white"
-  },
-  button: {
-    paddingBottom: "1rem"
   },
   mobileLink: {
     textDecoration: "none",
@@ -98,7 +105,6 @@ export default function Header({ siteTitle, subTitle, menuLinks }) {
       <div className={classes.headerInnerDiv}>
         <Link to="/" className={classes.link}>
           <h1 className={classes.siteTitle}>
-            {" "}
             {siteTitle}
             <span className={classes.subTitle}>{subTitle}</span>
           </h1>
@@ -110,7 +116,6 @@ export default function Header({ siteTitle, subTitle, menuLinks }) {
                 aria-controls="simple-menu"
                 aria-haspopup="true"
                 onClick={handleClick}
-                className={classes.button}
               >
                 <GiHamburgerMenu className={classes.hamburgerMenu} />
               </Button>
@@ -142,8 +147,7 @@ export default function Header({ siteTitle, subTitle, menuLinks }) {
                 {menuLinks.map(link => (
                   <li key={link.name} className={classes.listItem}>
                     <Link className={classes.link} to={link.link}>
-                      {" "}
-                      {link.name}{" "}
+                      {link.name}
                     </Link>
                   </li>
                 ))}
