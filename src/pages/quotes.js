@@ -6,13 +6,13 @@ import { fetchResults } from "../utils/api"
 class QuotesPage extends Component {
   state = {
     quoteList: [],
-    hasError: false,
+    hasError: false
   }
 
   async componentDidMount() {
     try {
       const results = await fetchResults(
-        "http://my-json-server.typicode.com/WomenWhoCodeCincy/wwcode-cincy-database/quotes"
+        "https://my-json-server.typicode.com/WomenWhoCodeCincy/wwcode-cincy-database/quotes"
       )
       if (results.success) {
         this.setState({ quoteList: results.results, hasError: false })
@@ -60,26 +60,26 @@ const classes = {
     fontFamily: "Arial",
     marginBottom: "10px",
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "column"
   },
   quote: {
-    marginBottom: "10px",
+    marginBottom: "10px"
   },
   author: {
     fontStyle: "italic",
-    fontSize: "15px",
+    fontSize: "15px"
   },
   submittedBy: {
     fontStyle: "italic",
-    fontSize: "15px",
+    fontSize: "15px"
   },
   submittedByName: {
     color: "#949494",
     margin: 0,
     textAlign: "right",
     fontSize: "15px",
-    fontStyle: "italic",
-  },
+    fontStyle: "italic"
+  }
 }
 
 export default QuotesPage
