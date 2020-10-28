@@ -2,24 +2,26 @@ import React, { Component } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ResourceItem from "../components/resourceItem"
-import {fetchResults} from '../utils/api.js';
+import { fetchResults } from "../utils/api.js"
 
 class ResourcesPage extends Component {
   state = {
     resourcesList: [],
     hasError: false,
-    errorMessage: ''
+    errorMessage: ""
   }
   async componentDidMount() {
     try {
-      const response = await fetchResults('http://my-json-server.typicode.com/WomenWhoCodeCincy/wwcode-cincy-database/learning_resources');
-      if (response.success){
-        this.setState({ resourcesList: response.results, hasError: false});
+      const response = await fetchResults(
+        "https://my-json-server.typicode.com/WomenWhoCodeCincy/wwcode-cincy-database/learning_resources"
+      )
+      if (response.success) {
+        this.setState({ resourcesList: response.results, hasError: false })
       } else {
-        this.setState({hasError: true, errorMessage: response.error});
+        this.setState({ hasError: true, errorMessage: response.error })
       }
     } catch {
-      this.setState({hasError: true});
+      this.setState({ hasError: true })
     }
   }
 
