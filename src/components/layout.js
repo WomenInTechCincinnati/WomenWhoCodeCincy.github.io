@@ -42,7 +42,9 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`
         }}
       >
-        <main>{children}</main>
+        <main style={{
+          minHeight: 'calc(100vh - 324px)' // need this calculation to ensure footer is sticky to bottom of page
+        }}>{children}</main>
       </div>
       <Footer />
     </>
