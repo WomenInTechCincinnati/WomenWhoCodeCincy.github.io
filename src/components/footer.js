@@ -4,6 +4,8 @@ import { graphql, useStaticQuery } from "gatsby"
 
 const useStyles = makeStyles(theme => ({
   footer: {
+    backgroundColor: "#007a7c",
+    color: "white",
     position: 'absolute',
     bottom: 0,
     width: '100%'
@@ -18,6 +20,10 @@ const useStyles = makeStyles(theme => ({
   },
   list: {
       listStyle: 'none'
+  },
+  footerLink: {
+    color: "white",
+    textDecoration: "none",
   }
 }))
 
@@ -40,8 +46,8 @@ export default function Footer() {
       <div className={classes.footerInnerDiv}>
         <ul className={classes.list}> 
             <li> {contactInfo.contact.email} </li>
-            <li> <a href={contactInfo.contact.links.twitter}>Twitter/</a> </li>
-            <li> © {new Date().getFullYear()}, Built with {` `} <a href="https://www.gatsbyjs.com"> Gatsby</a></li>
+            <li> <a href={contactInfo.contact.links.twitter} className={classes.footerLink}>Twitter/</a> </li>
+            <li> © {new Date().getFullYear()}, Built with {` `} <a href="https://www.gatsbyjs.com" className={classes.footerLink}> Gatsby</a></li>
         </ul>
       </div>
     </footer>
