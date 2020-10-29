@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
   footer: {
     backgroundColor: "#007a7c",
     color: "white",
-    position: 'absolute',
+    position: 'relative',
     bottom: 0,
     width: '100%'
   },
