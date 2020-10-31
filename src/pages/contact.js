@@ -10,6 +10,7 @@ const ContactPage = () => {
         email
         links {
           twitter
+          facebook
         }
       }
     }
@@ -19,7 +20,8 @@ const ContactPage = () => {
       <SEO title="Contact" />
       <h1>Contact Info</h1>
       <p>{contactInfo.contact.email}</p>
-      <a href={contactInfo.contact.links.twitter}>twitter</a>
+      <p><a href={contactInfo.contact.links.twitter}>twitter</a></p>
+      <p><a href={contactInfo.contact.links.facebook}>facebook</a></p>
     </Layout>
   )
 }
