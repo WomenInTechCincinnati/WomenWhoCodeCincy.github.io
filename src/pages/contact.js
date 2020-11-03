@@ -22,17 +22,29 @@ const ContactPage = () => {
       <h1>Contact Info</h1>
       <p>{contactInfo.contact.email}</p>
       <p>
-        <a href={contactInfo.contact.links.twitter} target="_blank">
+        <a
+          href={contactInfo.contact.links.twitter}
+          target="_blank"
+          rel="noreferrer"
+        >
           Twitter
         </a>
       </p>
       <p>
-        <a href={contactInfo.contact.links.facebook} target="_blank">
+        <a
+          href={contactInfo.contact.links.facebook}
+          target="_blank"
+          rel="noreferrer"
+        >
           Facebook
         </a>
       </p>
       <p>
-        <a href={contactInfo.contact.links.meetup} target="_blank">
+        <a
+          href={contactInfo.contact.links.meetup}
+          target="_blank"
+          rel="noreferrer"
+        >
           Meetup
         </a>
       </p>
