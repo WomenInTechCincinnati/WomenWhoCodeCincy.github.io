@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { fetchResults } from "../utils/api";
-import MembersItem from "../components/MembersItem";
+import MembersItem from "../components/membersItem";
 
 class MembersPage extends Component {
   state = {
