@@ -1,32 +1,32 @@
-import React, { Component } from "react";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import { fetchResults } from "../utils/api";
-import MembersItem from "../components/MembersItem";
+import React, { Component } from "react"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import { fetchResults } from "../utils/api"
+import MembersItem from "../components/membersItem"
 
 class MembersPage extends Component {
   state = {
     membersList: [],
-    hasError: false,
-  };
+    hasError: false
+  }
 
   async componentDidMount() {
     try {
       const response = await fetchResults(
         "https://my-json-server.typicode.com/WomenWhoCodeCincy/wwcode-cincy-database/members"
-      );
+      )
       if (response.success) {
-        this.setState({ membersList: response.results, hasError: false });
+        this.setState({ membersList: response.results, hasError: false })
       } else {
-        this.setState({ hasError: true });
+        this.setState({ hasError: true })
       }
     } catch {
-      this.setState({ hasError: true });
+      this.setState({ hasError: true })
     }
   }
 
   render() {
-    const { membersList, hasError } = this.state;
+    const { membersList, hasError } = this.state
 
     return (
       <Layout>
@@ -47,8 +47,8 @@ class MembersPage extends Component {
           ))}
         </section>
       </Layout>
-    );
+    )
   }
 }
 
-export default MembersPage;
+export default MembersPage
