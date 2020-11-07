@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import Footer from "./footer"
 import Header from "./header"
 import "./layout.css"
 
@@ -42,17 +42,11 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`
         }}
       >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <main style={{
+          minHeight: 'calc(100vh - 324px)' // need this calculation to ensure footer is sticky to bottom of page
+        }}>{children}</main>
       </div>
+      <Footer />
     </>
   )
 }
